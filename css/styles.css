@@ -530,8 +530,8 @@ body {
 .social-list {
   margin-right: 10px;
 }
-.social-list:nth-child(:last-child) {
-  margin-right: o;
+.social-list:last-child {
+  margin-right: 0;
 }
 .footer-link:hover,
 .footer-link:focus {
