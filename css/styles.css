@@ -112,12 +112,10 @@ body {
   position: absolute;
   content: '';
   left: 0;
-  bottom: 0;
-
+  bottom: -1px;
   display: block;
   width: 100%;
   height: 4px;
-
   background-color: #2196f3;
   border-radius: 2px;
   transform: scaleX(0);
@@ -128,20 +126,19 @@ body {
 .site-nav .link:focus {
   color: var(--blue);
 }
-.site-nav .link.current {
+.site-nav .current {
   color: var(--blue);
 }
 .site-nav .link.current::after {
   position: absolute;
   content: '';
-  display: block;
   height: 4px;
   width: 100%;
   border-radius: 2px;
   background-color: var(--blue);
   bottom: -1px;
   left: 0;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
