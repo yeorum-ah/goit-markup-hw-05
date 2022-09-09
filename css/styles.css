@@ -107,6 +107,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link::after {
   position: absolute;
@@ -352,7 +353,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
-  padding-top: 30px;
   margin-bottom: 10px;
 }
 .team .position {
@@ -389,6 +389,8 @@ body {
   border-radius: 50px;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link:nth-child(:first-child) {
   margin-left: 0;
@@ -433,7 +435,8 @@ body {
   border-radius: 4px;
   width: 170px;
   height: 90px;
-  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list {
   margin-right: 30px;
@@ -481,6 +484,7 @@ body {
   color: var(--white);
   text-decoration: none;
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-list .mail,
@@ -488,6 +492,7 @@ body {
   color: var(--footer-mail-number);
   text-decoration: none;
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress-list .city:hover,
 .adress-list .mail:hover,
@@ -525,7 +530,7 @@ body {
   color: var(--white);
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list {
   margin-right: 10px;
@@ -536,7 +541,6 @@ body {
 .footer-link:hover,
 .footer-link:focus {
   background-color: var(--blue);
-  color: var(--white);
 }
 .footer-icon {
   width: 20px;
@@ -558,6 +562,8 @@ body {
   padding: 6px 22px 6px 22px;
   min-width: 73px;
   outline: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    bacbackground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters .position :hover,
@@ -607,6 +613,7 @@ body {
 .serv-list .item {
   text-decoration: none;
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .serv-list {
@@ -622,6 +629,9 @@ body {
 .serv-list .item:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.serv-list .item:hover .overlay {
+  transform: translateY(0px);
 }
 .serv-list:nth-child(3n) {
   margin-right: 0;
@@ -648,13 +658,13 @@ body {
   height: 100%;
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translatey(100%);
+  transform: translateY(100%);
   opacity: 0;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .serv-card:hover .overlay {
-  transform: translatey(0);
+  transform: translateY(0);
   opacity: 1;
 }
 /*хідден*/
@@ -673,16 +683,12 @@ body {
 /*modal*/
 .backdrop {
   position: fixed;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100vw;
   height: 100vh;
-
   background-color: rgba(0, 0, 0, 0.2);
-
   top: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -710,11 +716,9 @@ body {
 
 .close-btn {
   position: absolute;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   right: 8px;
   top: 8px;
   background-color: transparent;
